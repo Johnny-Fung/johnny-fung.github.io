@@ -1,0 +1,34 @@
+:root {
+    background:whitesmoke;
+}
+
+
+p {
+    font-family: 'San-Francisco', sans-serif;
+}
+
+/***Fonts***/
+
+/*Section Title*/
+.section-title {
+    font-family: 'San-Francisco', sans-serif;
+    font-weight: normal;
+}
+
+/***Sections***/
+
+/*Navigation Bar*/
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 10;
+    background: maroon;
+}
+
+.navbar-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+/*Introduction*/
