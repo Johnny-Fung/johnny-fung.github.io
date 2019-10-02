@@ -2,13 +2,15 @@
     background:whitesmoke;
 }
 
-/***Sizing***/
+/*****Sizing for scalability*****/
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 100%;
     scroll-behavior: smooth;
   }
+
 /* Set font size based on screen different screen view size */
+/* Temporarily remove
 @media (max-width: 75em) {
     html {
       font-size: 60%;
@@ -24,19 +26,23 @@ html {
       font-size: 55%;
     }
   }
-  
+*/
+
 /***Fonts***/
-p {
+p,a {
     font-family: 'San-Francisco', sans-serif;
 }
 
-/*Section Title*/
+
+/*Section Titles*/
 .section-title {
     font-family: 'San-Francisco', sans-serif;
-    font-weight: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
 }
 
-/***Sections***/
+/*****Individual Section Formatting*****/
 
 /*Navigation Bar*/
 .navbar {
@@ -53,3 +59,26 @@ p {
 }
 
 /*Introduction*/
+.intro-align {
+    display: flex;
+    align-items: right;
+    width: 50%;
+}
+
+/*About*/
+/*Projects*/
+
+/*Contact Info*/
+.contact-align {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.contact-button {
+    font-size: 2rem;
+    transition: transform 0.3s ease-out;
+}
+/*Contact Info HOVER NOT WORKING*/
+.contact-button:hover {
+    transform: translateY(-8px);
+}
