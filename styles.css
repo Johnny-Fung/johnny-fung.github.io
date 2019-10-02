@@ -67,6 +67,19 @@ p,a {
 
 /*About*/
 /*Projects*/
+.projects-align {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: orange;
+}
+.projects-align .box {
+    width: 50%;
+    text-align: left;
+    font-size: 1.5rem;
+    background-color: lightgreen;
+    margin: 10px;
+}
+/*Interests*/
 
 /*Contact Info*/
 .contact-align {
@@ -78,7 +91,6 @@ p,a {
     font-size: 2rem;
     transition: transform 0.3s ease-out;
 }
-/*Contact Info HOVER NOT WORKING*/
 .contact-button:hover {
     transform: translateY(-8px);
 }
