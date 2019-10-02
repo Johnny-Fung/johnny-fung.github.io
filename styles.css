@@ -2,12 +2,33 @@
     background:whitesmoke;
 }
 
-
+/***Sizing***/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+/* Set font size based on screen different screen view size */
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+@media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+@media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+/***Fonts***/
 p {
     font-family: 'San-Francisco', sans-serif;
 }
-
-/***Fonts***/
 
 /*Section Title*/
 .section-title {
@@ -20,14 +41,14 @@ p {
 /*Navigation Bar*/
 .navbar {
     display: flex;
-    justify-content: flex-end;
-    top: 0;
-    right: 10;
     background: maroon;
 }
 
 .navbar-list {
     display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 0;
     margin-right: 2rem;
 }
 
