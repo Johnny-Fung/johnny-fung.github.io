@@ -4,44 +4,36 @@
     rel="stylesheet" 
     href="styles.css"
 />
+
 <head>
     <script src="https://kit.fontawesome.com/5346195df8.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <title>Johnny Fung</title>
 </head>
 
 
 <!--Navigation Bar-->
-<nav id="navigation" class="navbar">
-    <style>
-        .circle {
-            height: 50px;
-            width: 50px;
-            border-radius: 50px;
-            background-color:skyblue;
-            margin-left: 20px;
-        }
-    </style>
-    <p class="circle"></p>
-    <ul class="navbar-list">
+<div id="navigation" class="navbar">
+    <img 
+    src="media/icon.png"
+    alt="Johnny Fung"
+    style="width:6rem; height:6rem;"
+    >
+    <div class="navbar-links">
+        <a href="#projects-section">Projects</a>
         <a href="#about-section">About</a>
-        <a href="#projects-section">Github</a>
         <a href="#contact-section">Contact</a>
-    </ul>
-
-</nav>
+    </div>
+</div>
 
 <!--Intro Section-->
 <section id="intro-section">
-    <h1 class="section-title intro-align">Hi, I'm Johnny Fung. I am currently a student at the University of Waterloo majoring in Statistics. Intro to be continued...</h1>
-</section>
-
-<!--About Section-->
-<section id="about-section">
-    <h1 class="section-title">About</h1>
-        <p>Mini description about myself. Temporary: Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside Amazon, Apple, and Facebook.</p>
+    <h1 class="section-title intro-align">Hello. I’m Johnny Fung, an aspiring software engineer and student at the University of Waterloo currently studying Statistics.</h1>
     <img 
-        src="media/doge.png"
-        alt="Photo Placeholder"
-        style="width:200px; height:200px;"
+    class="intro-align-pic"
+    src="media/doge.png"
+    alt="Photo Placeholder"
+    style="width:200px; height:200px;"
     >
 </section>
 
@@ -59,7 +51,7 @@
             <img 
             class="projects-align"
             src="media/doge.jpg"
-            alt="GitHub link to Paint Program"
+            alt="Paint Program Preview"
             style="width:520px; height:300px;"
             />
         </div>
@@ -80,7 +72,7 @@
             <img 
             class="projects-align"
             src="media/doge.jpg"
-            alt="GitHub link to Street Fighter"
+            alt="Street Fighter Preview"
             style="width:520px; height:300px;"
             />
         </div>
@@ -91,6 +83,12 @@
     </div>
     </a>
     <!--Project End-->
+</section>
+
+<!--About Section-->
+<section id="about-section">
+    <h1 class="section-title">About</h1>
+        <p class="about-align">When I’m not catching up on the latest tech news, you’ll find me underneath my car making modifications. I’m a huge gearhead, I really enjoy meeting new people, and I love talking about new ideas. Feel free to reach out!</p>
 </section>
 
 <!--Contact Section-->

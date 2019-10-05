@@ -1,14 +1,24 @@
+/*****Global Values*****/
 :root {
-    background:whitesmoke;
+    --main-grey:rgb(24,26,27);
+    --main-light-grey:rgb(198,194,187);
+    --main-blue:rgb(57,132,247);
+    background:var(--main-grey);
+    color:var(--main-light-grey);
 }
-
+a {
+  color: var(--main-light-grey);
+  text-decoration: none;
+}
+a:hover {
+  color:var(--main-blue);
+}
 /*****Sizing for scalability*****/
 html {
     box-sizing: border-box;
     font-size: 100%;
     scroll-behavior: smooth;
   }
-
 /* Set font size based on screen different screen view size */
 /* Temporarily remove
 @media (max-width: 75em) {
@@ -38,24 +48,22 @@ p,a {
 .section-title {
     font-family: 'San-Francisco', sans-serif;
     font-weight: 500;
-    font-size: 2rem;
-    letter-spacing: 0.02em;
+    font-size: 3rem;
+    letter-spacing: 0.025em;
 }
 
 /*****Individual Section Formatting*****/
 
 /*Navigation Bar*/
 .navbar {
-    display: flex;
-    background: maroon;
+    overflow: hidden;
+    padding:1.5rem;
 }
-
-.navbar-list {
-    display: flex;
-    justify-content: flex-end;
-    top: 0;
-    right: 0;
-    margin-right: 2rem;
+.navbar-links {
+    float:right;
+    list-style-type: none;
+    font-size:1.3rem;
+    text-align: center;
 }
 
 /*Introduction*/
@@ -65,31 +73,42 @@ p,a {
     width: 50%;
 }
 
-/*About*/
 /*Projects*/
 .projects-align {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /*
     background-color: orange;
+    */
+    justify-content: center;
 }
 .projects-align .box {
-    width: 50%;
-    text-align: left;
+    width: 42%;
+    text-align: center;
     font-size: 1.5rem;
+    /*
     background-color: lightgreen;
-    margin: 10px;
+    */
+    margin: 15px;
+    justify-content: center;
 }
-/*Interests*/
+
+/*About*/
+.about-align {
+  font-size: 1.5rem;
+}
 
 /*Contact Info*/
 .contact-align {
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-wrap:wrap;
 }
 .contact-button {
     font-size: 2rem;
     transition: transform 0.3s ease-out;
+    padding-left: 4rem;
 }
 .contact-button:hover {
     transform: translateY(-8px);
