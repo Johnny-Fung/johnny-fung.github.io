@@ -8,21 +8,22 @@
     background:var(--main-grey);
     color:var(--main-light-grey);
 }
+html {
+  scroll-behavior: smooth;
+}
 a {
     color: var(--main-light-grey);
     text-decoration: none;
 }
 a:hover {
-   color:var(--main-blue);
+    color:var(--main-blue);
 }
 /*****Screen size scaling*****/
-
 
 /***Fonts***/
 p,a {
     font-family: 'San-Francisco', sans-serif;
 }
-
 
 /*Section Titles*/
 .section-title {
@@ -35,28 +36,26 @@ p,a {
   text-align: center;
   font-size: 2rem;
 }
-/*****Individual Section Formatting*****/
 
+/*****Individual Section Formatting*****/
 /*Navigation Bar*/
 .navbar {
     position: relative;
     overflow: hidden;
     padding:2em 0 0.5em;
-    /*
-    width: 100%-2*var(--site-edges);
-    */
+    /* width: 100%-2*var(--site-edges); */
     max-width: var(--site-width);
     margin: 0 auto;
     /* background-color: maroon; */
 }
 .navbar-links {
     float:right;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     text-align: center;
     padding-top: 2rem;
 }
 .navbar-links a{
-  padding-left: 2rem;
+  padding-left: 2.35rem;
 }
 .navbar-logo {
     float:left;
@@ -125,6 +124,7 @@ p,a {
     /* background-color: goldenrod; */
 }
 .contact-button {
+    display:inline-block;
     font-size: 2rem;
     transition: transform 0.3s ease-out;
     padding-left: 4rem;
@@ -132,3 +132,10 @@ p,a {
 .contact-button:hover {
     transform: translateY(-8px);
 }
+
+
+/* - set up google analytics for site
+- Need to fix:
+intro section alignment
+Hover areas
+navigation scroll to area */
