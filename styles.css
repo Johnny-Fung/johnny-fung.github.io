@@ -11,7 +11,6 @@ html {
     scroll-behavior: smooth;
 }
 a {
-    color: var(--main-blue);
     text-decoration: none;
 }
 ul {
@@ -74,7 +73,6 @@ p,a {
 .navbar-links a:hover {
     color:var(--main-blue);
 }
-
 /*Introduction*/
 .intro-section {
     display: flex;
@@ -155,6 +153,26 @@ p,a {
     padding-left: 10%;
     /* background: red; */
 }
+.about-text-links {
+    color: var(--main-blue);
+    position: relative;
+}
+.about-text-links:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--main-blue);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.about-text-links:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
 
 /*Contact Section*/
 .contact-section {
@@ -198,14 +216,15 @@ p,a {
 
 /* 
 - Need to fix:
-persistent nav bar but change colour on scroll?
-page sectioning
-fix hover padding area for links on navigation bar
-hover to show next project preview?
-get project screenshots ontop of mac
-color certain words with hyperlinks
-swap light/dark mode
 particle effect for intro
+fix hover padding area for links on navigation bar
+get project screenshots ontop of mac
+color and underline certain words with hyperlinks
 fix positioning for other screen sizes
 @media for different screen sizes
+
+- Nice to haves:
+hover to show next project preview?
+persistent nav bar but change colour on scroll?
+swap light/dark mode?
 */
