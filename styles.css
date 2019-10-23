@@ -59,16 +59,18 @@ p,a {
     transition: transform 0.3s ease-out;
 }
 .navbar-logo:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     opacity: 0.9;
 }
 .navbar-links {
-    display: flex;
-    margin-right: 2rem;
+    display: inline-flex;
+    /* background: red; */
 }
 .navbar-links a {
-    padding: 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     color: var(--main-light-grey);
+    transition: color 0.3s ease-out;
+    /* background: yellow; */
 }
 .navbar-links a:hover {
     color:var(--main-blue);
@@ -77,8 +79,8 @@ p,a {
 .intro-section {
     display: flex;
     width: 100%;
-    padding: 8rem;
-    justify-content: center;
+    padding: 12rem;
+    justify-content: space-evenly;
     background-color: green;
 }
 .intro-section h1 {
@@ -109,7 +111,8 @@ p,a {
     /* background: orange; */
   }
 .projects-tile {
-    background:black;
+    background: black;
+    /* background: white; */
 }
 .projects-tile-picture {
     width:100%;
@@ -205,7 +208,7 @@ p,a {
     display: inline-block;
     font-size: 2rem;
     transition: transform 0.3s ease-out;
-    padding-left: 4rem;
+    padding: .45rem 2rem .45rem 2rem;
     color:var(--main-light-grey);
 }
 .contact-buttons:hover {
@@ -217,14 +220,16 @@ p,a {
 /* 
 - Need to fix:
 particle effect for intro
-fix hover padding area for links on navigation bar
 get project screenshots ontop of mac
-color and underline certain words with hyperlinks
-fix positioning for other screen sizes
-@media for different screen sizes
+
+- Must dos:
+** fix positioning for other screen sizes
+** @media for different screen sizes
 
 - Nice to haves:
-hover to show next project preview?
-persistent nav bar but change colour on scroll?
-swap light/dark mode?
+find more words to add color accent (my car for blog section?)
+hover to show next project preview
+persistent nav bar but change colour on scroll
+blog portion with link to BMW video and car modification photos
+swap light/dark mode
 */
