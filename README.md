@@ -1,5 +1,7 @@
-# Website
+# My Website
 [johnnyfung.ca](https://www.johnnyfung.ca)
+
+
 My personal website to blog and showcase some projects in my portfolio.
 - Work in progress
 
