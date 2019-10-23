@@ -8,4 +8,4 @@ My personal website to blog and showcase some fun projects in my portfolio.
 
 
 ## Credits
-Credits to [Louis Hoebregts](https://github.com/Mamboleoo) for the inspiration and [tutorial](https://codepen.io/Mamboleoo/post/how-to-convert-an-image-into-particles) on converting images to particles which was implemented on my site.
+Credits to [Louis Hoebregts](https://github.com/Mamboleoo) for the inspiration and [guide](https://codepen.io/Mamboleoo/post/how-to-convert-an-image-into-particles) on converting images to particles which was implemented on my site.
