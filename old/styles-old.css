@@ -122,6 +122,26 @@ p,a {
 .about-section-text {
     font-size: 1.5rem;
 }
+.about-text-links {
+    color: var(--main-blue);
+    position: relative;
+}
+.about-text-links:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--main-blue);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.about-text-links:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
 
 /*Contact Info*/
 .contact-section {

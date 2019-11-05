@@ -76,17 +76,46 @@ p,a {
     color:var(--main-blue);
 }
 /*Introduction*/
+
 .intro-section {
-    display: flex;
     width: 100%;
-    padding: 12rem;
-    justify-content: space-evenly;
-    background-color: green;
+    height: 44vw;
 }
 .intro-section h1 {
     align-items: center;
 }
 
+/* canvas{
+    background: black;
+    width: 100vw;
+    height: 100vh; */
+    
+.intro-input {
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute; /*change to relative? */
+    bottom: 500px;
+    left: calc(50% - 125px);
+    background: none;
+    color: white;
+    font-size: 30px;
+    font-family: 'San Francisco';
+    text-align: center;
+    border: 1px solid white;
+    background: rgba(255,255,255,0.2);
+}
+.intro-instructions {
+    position: absolute;
+    left: 0;
+    bottom: 450px;
+    color: white;
+    font-size: 16px;
+    opacity: 0.5;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 /*Projects Section*/
 .projects-section {
     width: 100%;
@@ -136,8 +165,8 @@ p,a {
 /*About Section*/
 .parallax {
     background-image: url("media/about-banner.jpg");
-    width:100%;
-    height:600px;
+    width: 100%;
+    height: 38vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -220,16 +249,24 @@ p,a {
 /* 
 - Need to fix:
 particle effect for intro
-get project screenshots ontop of mac
+get project screenshots ontop of mac 
+scroll to show text with transition up (apple TV page)
+projects hover up on scroll (ontology site)
+fix logo home button
 
 - Must dos:
-** fix positioning for other screen sizes
+** fix positioning for other screen sizes (use vh instead of rem?)
 ** @media for different screen sizes
 
 - Nice to haves:
 find more words to add color accent (my car for blog section?)
-hover to show next project preview
+hover to show more project previews?
 persistent nav bar but change colour on scroll
 blog portion with link to BMW video and car modification photos
 swap light/dark mode
+*/
+
+/* 
+git remote -v
+git push origin 
 */

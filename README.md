@@ -2,7 +2,7 @@
 [johnnyfung.ca](https://www.johnnyfung.ca)
 
 
-My personal portfolio website to blog and showcase some fun projects in my portfolio.
+My personal website to blog and showcase some fun projects in my portfolio.
 - Work in progress
 
 

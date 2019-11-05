@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
     <!--Stylesheet-->
     <link rel="stylesheet" href="styles.css"/>
+    <!--Javascript-->
+    <script type="text/javascript" src="./intro.js"></script>
     <!-- Company Logos for Contact Section -->
     <script src="https://kit.fontawesome.com/5346195df8.js" crossorigin="anonymous"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,14 +23,15 @@
     </script>
 </head>
 
-
+<body>
 <!--Navigation Bar-->
 <div class="navbar-background"></div>
+<a name="top"></a>
 <nav id="navigation" class="navbar">
     <div></div>
     <a 
     class="navbar-logo"
-    href="johnnyfung.ca">
+    href="#top">
         <img 
         src="media/icon.png"
         alt="Johnny Fung"
@@ -45,8 +48,11 @@
 </nav>
 
 <!--Introduction Section-->
-<section id="intro" class="intro-section">
-    <h1 class="section-title">Hi, I’m Johnny Fung!</h1>
+<section id="introduction" class="intro-section">
+    <canvas id="scene"></canvas>
+    <input class="intro-input" id="input-text" type="text" value="enter input here"/>
+    <p class="intro-instructions">Enter instructions here:</p>
+    <!-- <h1 class="section-title">Hi, I’m Johnny Fung!</h1> -->
 </section>
 
 <!--Projects Section-->
@@ -170,3 +176,6 @@
         <!--Contact End-->
     </div>
 </section>
+
+</body>
+
