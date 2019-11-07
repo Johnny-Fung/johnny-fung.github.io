@@ -29,12 +29,22 @@ function Particle(x,y){
     this.accX = 0;
     this.accY = 0;
     this.friction = Math.random()*0.05 + 0.94;
+<<<<<<< HEAD
     //Randomly pick 1 of 5 colours
     this.color = colors[Math.floor(Math.random()*6)];
 }
 // Specify the Particle function to assign it's prototype to:
 Particle.prototype.render = function() {
 
+=======
+
+    this.color = colors[Math.floor(Math.random()*6)];
+}
+
+Particle.prototype.render = function() {
+
+
+>>>>>>> dfa39d1420ee05a7f76f339f99f776afdf7c588f
     this.accX = (this.dest.x - this.x)/1000;
     this.accY = (this.dest.y - this.y)/1000;
     this.vx += this.accX;
@@ -81,8 +91,13 @@ mouse.y = -9999;
 }
 
 function initScene(){
+<<<<<<< HEAD
     ww = canvas.width = elmnt.clientWidth;
     wh = canvas.height = elmnt.clientHeight;
+=======
+    ww = canvas.width = window.innerWidth;
+    wh = canvas.height = window.innerHeight;
+>>>>>>> dfa39d1420ee05a7f76f339f99f776afdf7c588f
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -108,7 +123,11 @@ function initScene(){
 
 function onMouseClick(){
     radius++;
+<<<<<<< HEAD
     if(radius ===4){
+=======
+    if(radius ===5){
+>>>>>>> dfa39d1420ee05a7f76f339f99f776afdf7c588f
         radius = 0;
     }
 }

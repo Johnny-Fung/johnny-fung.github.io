@@ -79,8 +79,12 @@ p,a {
 
 .intro-section {
     width: 100%;
+<<<<<<< HEAD
     height: 40vw;
     background: maroon;
+=======
+    height: 44vw;
+>>>>>>> dfa39d1420ee05a7f76f339f99f776afdf7c588f
 }
 .intro-section h1 {
     align-items: center;
