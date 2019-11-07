@@ -79,8 +79,8 @@ p,a {
 
 .intro-section {
     width: 100%;
-    padding: 14rem;
-    background-color: green;
+    height: 40vw;
+    background: maroon;
 }
 .intro-section h1 {
     align-items: center;
@@ -95,7 +95,7 @@ p,a {
     width: 250px;
     height: 40px;
     line-height: 40px;
-    position: fixed; /*change to relative? */
+    position: absolute; /*change to relative? */
     bottom: 500px;
     left: calc(50% - 125px);
     background: none;
@@ -107,7 +107,7 @@ p,a {
     background: rgba(255,255,255,0.2);
 }
 .intro-instructions {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 450px;
     color: white;
@@ -166,8 +166,8 @@ p,a {
 /*About Section*/
 .parallax {
     background-image: url("media/about-banner.jpg");
-    width:100%;
-    height:600px;
+    width: 100%;
+    height: 38vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
