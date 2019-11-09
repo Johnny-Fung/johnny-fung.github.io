@@ -42,7 +42,7 @@ function Particle(x,y){
     this.accX = 0;
     this.accY = 0;
     // Particle bounce friction
-    this.friction = Math.random()*0.05 + 0.92;
+    this.friction = Math.random()*0.05 + 0.923;
     //Randomly pick 1 of 5 colours
     this.color = colors[Math.floor(Math.random()*6)];
 }

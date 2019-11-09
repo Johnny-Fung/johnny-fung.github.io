@@ -51,7 +51,7 @@ p,a {
     top: 0;
     left: 0;
     width: 100%;
-    /* Colour with background opaque: --main-grey:rgb(24,26,27); */
+    /* Opaque background */
     background: rgba(24,26,27,0.9);
 }
 .navbar-logo {
@@ -91,7 +91,7 @@ p,a {
     height: 40px;
     line-height: 40px;
     position: absolute;
-    top: 18em;
+    top: 17em;
     left: calc(50% - 125px);
     background: none;
     color: white;
@@ -101,7 +101,7 @@ p,a {
     border: 1px solid white;
     background: rgba(255,255,255,0.2);
     animation-name: input-fade;
-    animation-duration: 5s;
+    animation-duration: 6s;
 }
 @keyframes instructions-fade {
     from {opacity: 0;}
@@ -109,7 +109,7 @@ p,a {
 }
 .intro-instructions {
     position: absolute;
-    top: 38em;
+    top: 36em;
     color: white;
     font-size: 16px;
     opacity: 0.5;
@@ -117,7 +117,7 @@ p,a {
     text-align: center;
     margin: 0;
     animation-name: instructions-fade;
-    animation-duration: 5s;
+    animation-duration: 6s;
   }
 /*Projects Section*/
 .projects-section {
@@ -169,7 +169,7 @@ p,a {
 .parallax {
     background-image: url("media/about-banner.jpg");
     width: 100%;
-    height: 38vw;
+    height: 39vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -214,8 +214,8 @@ p,a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 6rem;
+    padding-top: 2em;
+    padding-bottom: 5em;
     background-color: var(--main-grey);
 }
 .contact-sectioning {
@@ -240,7 +240,7 @@ p,a {
     display: inline-block;
     font-size: 2rem;
     transition: transform 0.3s ease-out;
-    padding: .45rem 2rem .45rem 2rem;
+    padding: .45rem 2rem 0rem 2rem;
     color:var(--main-light-grey);
 }
 .contact-buttons:hover {
@@ -251,10 +251,13 @@ p,a {
 
 /* 
 - Need to fix:
-particle effect for intro: change colour scheme
+change colour schemes (intro and projects/contact section)
+intro input and desc, and statistics and CS hyperlinks on nav bar
+fix project preview sizes
 get project screenshots ontop of mac 
-scroll to show text with transition up (apple TV page)
-projects hover up on scroll (ontology site)
+remove horizontal scrollbar
+fix 4 sq of projects
+hover on project preview to fade in other previews
 
 - Must dos:
 ** fix positioning for other screen sizes (use vh instead of rem?)
@@ -263,7 +266,6 @@ projects hover up on scroll (ontology site)
 - Nice to haves:
 find more words to add color accent (my car for blog section?)
     "gearhead" - show youtube and car mods portfolio
-hover to show more project previews?
 persistent nav bar but change colour on scroll
 swap light/dark mode
 */
