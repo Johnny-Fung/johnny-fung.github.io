@@ -6,13 +6,18 @@ var canvas = document.querySelector("#scene"),
 		mouse = {x:0,y:0},
 		radius = 1;
 
-var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
+// Original color palette
+// var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
+// Dark color palette
+// var colors = ["#83142c","#263859", "#414141","#263859", "#6b778d"];
+// Colourful color palette
+var colors = ["#1E3888","#47A8BD", "#F5E663","#FFAD69", "#9C3848"];
 
 //Get height and width of section
 var elmnt = document.getElementById("intro-area");
 
 var copy = document.querySelector("#input-text");
-// Automatically resize canvas element to fit page
+// Automatically resize canvas element to fit div container
 var ww = canvas.width = elmnt.clientWidth;
 var wh = canvas.height = elmnt.clientHeight;
 
@@ -23,20 +28,29 @@ function Particle(x,y){
         x : x,
         y: y
     };
-    this.r =  Math.random()*5 + 2;
-    this.vx = (Math.random()-0.5)*20;
-    this.vy = (Math.random()-0.5)*20;
+
+    // Random particle size
+    // this.r =  Math.random()*5 + 2;
+    // Random pixel size
+    // this.r =  Math.random()*8 + 2;
+    // Defined pixel size
+    this.r = 7;
+
+    // Particle speed
+    this.vx = (Math.random()-0.5)*25;
+    this.vy = (Math.random()-0.5)*25;
     this.accX = 0;
     this.accY = 0;
-    this.friction = Math.random()*0.05 + 0.94;
+    // Particle bounce friction
+    this.friction = Math.random()*0.05 + 0.92;
     //Randomly pick 1 of 5 colours
     this.color = colors[Math.floor(Math.random()*6)];
 }
 // Specify the Particle function to assign it's prototype to:
 Particle.prototype.render = function() {
-
-    this.accX = (this.dest.x - this.x)/1000;
-    this.accY = (this.dest.y - this.y)/1000;
+    // Particle acceleration
+    this.accX = (this.dest.x - this.x)/650;
+    this.accY = (this.dest.y - this.y)/650;
     this.vx += this.accX;
     this.vy += this.accY;
     this.vx *= this.friction;
@@ -47,14 +61,18 @@ Particle.prototype.render = function() {
 
     ctx.fillStyle = this.color;
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+    // Draw circle particles
+    // ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+    // Draw pixel particles
+    ctx.rect(this.x, this.y, this.r, this.r);
     ctx.fill();
 
     var a = this.x - mouse.x;
     var b = this.y - mouse.y;
 
     var distance = Math.sqrt( a*a + b*b );
-    if(distance<(radius*70)){
+    //Friction speed
+    if(distance<(radius*45)){
         this.accX = (this.x - mouse.x)/100;
         this.accY = (this.y - mouse.y)/100;
         this.vx += this.accX;
@@ -93,7 +111,8 @@ function initScene(){
     var data  = ctx.getImageData(0, 0, ww, wh).data;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.globalCompositeOperation = "screen";
-
+    
+    //For pixels that are non-transparent in the text, push them into the particles array
     particles = [];
     for(var i=0;i<ww;i+=Math.round(ww/150)){
         for(var j=0;j<wh;j+=Math.round(ww/150)){
@@ -108,7 +127,7 @@ function initScene(){
 
 function onMouseClick(){
     radius++;
-    if(radius ===3){
+    if(radius ===4){
         radius = 0;
     }
 }
