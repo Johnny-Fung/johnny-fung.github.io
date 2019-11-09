@@ -6,12 +6,17 @@ var canvas = document.querySelector("#scene"),
 		mouse = {x:0,y:0},
 		radius = 1;
 
-// Original color palette
-// var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
-// Dark color palette
-// var colors = ["#83142c","#263859", "#414141","#263859", "#6b778d"];
-// Colourful color palette
-var colors = ["#1E3888","#47A8BD", "#F5E663","#FFAD69", "#9C3848"];
+// Color palettes:
+// [Original, Dark, Colourful, Winter/Blue, Green, Multicolor]
+var colorpalettes = [
+    ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"],
+    ["#83142c","#263859", "#414141","#263859", "#6b778d"],
+    ["#1E3888","#47A8BD", "#F5E663","#FFAD69", "#9C3848"],
+    ["#CFFCFF","#AAEFDF", "#9EE37D","#63C132", "#358600"], 
+    ["#114B5F", "#028090", "#E4FDE1","#456990", "#F45B69"],
+    ["#E7ECEF","#274C77", "#6096BA","#A3CEF1", "#8B8C89"]
+]
+var colors = colorpalettes[Math.floor(Math.random()*6)];
 
 //Get height and width of section
 var elmnt = document.getElementById("intro-area");
@@ -46,6 +51,7 @@ function Particle(x,y){
     //Randomly pick 1 of 5 colours
     this.color = colors[Math.floor(Math.random()*6)];
 }
+
 // Specify the Particle function to assign it's prototype to:
 Particle.prototype.render = function() {
     // Particle acceleration
