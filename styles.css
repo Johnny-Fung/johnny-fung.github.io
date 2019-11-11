@@ -56,7 +56,11 @@ p,a {
 }
 .navbar-logo {
     align-self: flex-end;
-    transition: transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;    
+    transition: transform 0.3s;
 }
 .navbar-logo:hover {
     transform: translateY(-3px);
@@ -69,6 +73,10 @@ p,a {
 .navbar-links a {
     padding: 1rem 1.5rem 1rem 1.5rem;
     color: var(--main-light-grey);
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    -ms-transition: color 0.3s ease-out;    
     transition: color 0.3s ease-out;
     /* background: yellow; */
 }
@@ -113,7 +121,7 @@ p,a {
     color: white;
     font-size: 16px;
     opacity: 0.5;
-    width: 100%;
+    width: 99%;
     text-align: center;
     margin: 0;
     animation-name: instructions-fade;
@@ -124,24 +132,24 @@ p,a {
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 4rem;
-    font-size: 2rem;
-    background-color: var(--main-grey);
+    /* background-color: var(--main-grey); */
+    /* background: maroon; */
 }
 .projects-section-title {
     max-width: 640px;
     margin: 0 auto 4rem auto;
     text-align: center;
+    font-size: 2rem;
 }
 .projects-grid-setup {
     display: grid;
     grid-template-columns: repeat(2, minmax(320px, 1fr));
-    grid-template-rows: 100%;
     grid-gap: 0.9rem;
     width: 98.3%;
     margin: 0 auto;
     margin-bottom: 1rem;
     /* background: orange; */
-  }
+}
 .projects-tile {
     background: black;
     /* background: white; */
@@ -152,16 +160,21 @@ p,a {
     object-fit: cover;
 }
 .projects-tile-title {
-    font: 2.5rem;
+    font-size: 1.4rem;
+    line-height: .4;
     text-align: center;
     color:var(--main-light-grey);
 }
-.projects-title-code {
+.projects-title-hidden-code {
     opacity: 0;
     color:var(--main-blue);
+    -webkit-transition: opacity 0.55s ease-out;
+    -moz-transition: opacity 0.55s ease-out;
+    -o-transition: opacity 0.55s ease-out;
+    -ms-transition: opacity 0.55s ease-out;    
     transition: opacity 0.55s ease-out;
 }
-.projects-tile:hover .projects-title-code {
+.projects-tile:hover .projects-title-hidden-code {
     opacity: 1.0;
 }
 
@@ -200,9 +213,13 @@ p,a {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var(--main-blue);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;    
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    background: var(--main-blue);
   }
 .about-text-links:hover:after { 
     width: 100%; 
@@ -239,6 +256,10 @@ p,a {
 .contact-buttons {
     display: inline-block;
     font-size: 2rem;
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    -ms-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     padding: .45rem 2rem 0rem 2rem;
     color:var(--main-light-grey);
@@ -251,14 +272,11 @@ p,a {
 
 /* 
 - Need to fix:
-change colour schemes (intro and projects/contact section)
 intro input and desc, and statistics and CS hyperlinks on nav bar
-fix project preview sizes
 get project screenshots ontop of mac 
-remove horizontal scrollbar
-fix 4 sq of projects and size
 hover on project preview to fade in other previews
-rename old website url
+
+change colour schemes (intro and projects/contact section)
 
 - Must dos:
 ** fix positioning for other screen sizes (use vh instead of rem?)
