@@ -159,9 +159,25 @@ p,a {
     height:100%;
     object-fit: cover;
 }
+.crossfade {
+    position: relative;
+}
+.crossfade img.fade {
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.55s ease-in-out;
+    -moz-transition: opacity 0.55s ease-in-out;
+    -o-transition: opacity 0.55s ease-in-out;
+    -ms-transition: opacity 0.55s ease-in-out;    
+    transition: opacity 0.55s ease-in-out;
+}
+.crossfade img.top:hover {
+    opacity:0;
+}
 .projects-tile-title {
-    font-size: 1.4rem;
-    line-height: .4;
+    font-size: 1.5rem;
+    line-height: .3;
     text-align: center;
     color:var(--main-light-grey);
 }
