@@ -132,8 +132,7 @@ p,a {
     width: 100%;
     padding-top: 0.7rem;
     padding-bottom: 4rem;
-    /* background-color: var(--main-grey); */
-    /* background: maroon; */
+    background: white;
 }
 .projects-section-title {
     max-width: 640px;
@@ -148,32 +147,30 @@ p,a {
     width: 98.3%;
     margin: 0 auto;
     margin-bottom: 1rem;
-    /* background: orange; */
 }
 .projects-tile {
     background: black;
-    /* background: white; */
 }
 .projects-tile-picture {
     width:100%;
     height: auto;
     object-fit: cover;
 }
-.crossfade {
+.preview-crossfade {
     position: relative;
 }
-.crossfade img.fade {
+.preview-crossfade img.fade {
     position: absolute;
     left: 0;
     opacity: 1;
-    -webkit-transition: opacity 0.85s ease-in-out;
-    -moz-transition: opacity 0.85s ease-in-out;
-    -o-transition: opacity 0.85s ease-in-out;
-    -ms-transition: opacity 0.85s ease-in-out;    
-    transition: opacity 0.85s ease-in-out;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    -ms-transition: opacity 0.8s ease-in-out;    
+    transition: opacity 0.8s ease-in-out;
 }
-.crossfade img.top:hover {
-    opacity:0;
+.projects-tile:hover .preview-crossfade img.top {
+    opacity: 0;
 }
 .projects-tile-title {
     font-size: 1.5rem;
@@ -184,11 +181,11 @@ p,a {
 .projects-title-hidden-code {
     opacity: 0;
     color: var(--main-blue);
-    -webkit-transition: opacity 0.85s ease-out;
-    -moz-transition: opacity 0.85s ease-out;
-    -o-transition: opacity 0.85s ease-out;
-    -ms-transition: opacity 0.85s ease-out;    
-    transition: opacity 0.85s ease-out;
+    -webkit-transition: opacity 0.8s ease-out;
+    -moz-transition: opacity 0.8s ease-out;
+    -o-transition: opacity 0.8s ease-out;
+    -ms-transition: opacity 0.8s ease-out;    
+    transition: opacity 0.8s ease-out;
 }
 .projects-tile:hover .projects-title-hidden-code {
     opacity: 1.0;
@@ -208,14 +205,12 @@ p,a {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* background-color: brown; */
 }
 .about-section-text {
     font-size: 1.6rem;
     line-height: 1.6;
     width: 38%;
     padding-left: 10%;
-    /* background: red; */
 }
 .about-text-links {
     color: var(--main-blue);
@@ -291,13 +286,12 @@ p,a {
 nav bar - other elements show on top
     intro input and desc, and statistics and CS hyperlinks on nav bar
     blur/opaque
-fix hover on project preview
 
 change colour schemes (intro and projects/contact section)
 
 - Must dos:
 ** fix positioning for other screen sizes (use vh instead of rem?)
-** @media for different screen sizes
+** @media for different screen sizes/resolutions
 
 - Nice to haves:
 find more words to add color accent (my car for blog section?)
