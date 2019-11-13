@@ -51,8 +51,9 @@ p,a {
     top: 0;
     left: 0;
     width: 100%;
+    z-index:1;
     /* Opaque background */
-    background: rgba(24,26,27,0.9);
+    background: rgba(24,26,27,0.9)
 }
 .navbar-logo {
     align-self: flex-end;
@@ -78,7 +79,6 @@ p,a {
     -o-transition: color 0.3s ease-out;
     -ms-transition: color 0.3s ease-out;    
     transition: color 0.3s ease-out;
-    /* background: yellow; */
 }
 .navbar-links a:hover {
     color:var(--main-blue);
@@ -132,13 +132,15 @@ p,a {
     width: 100%;
     padding-top: 0.7rem;
     padding-bottom: 4rem;
-    background: white;
+    /* background: white;
+    color: black; */
 }
 .projects-section-title {
     max-width: 640px;
     margin: 0 auto 4rem auto;
     text-align: center;
     font-size: 2rem;
+    /* color: black; */
 }
 .projects-grid-setup {
     display: grid;
@@ -282,12 +284,9 @@ p,a {
 
 
 /* 
-- Need to fix:
-nav bar - other elements show on top
-    intro input and desc, and statistics and CS hyperlinks on nav bar
-    blur/opaque
-
+- To do:
 change colour schemes (intro and projects/contact section)
+take professional picture
 
 - Must dos:
 ** fix positioning for other screen sizes (use vh instead of rem?)
