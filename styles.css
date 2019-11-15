@@ -28,7 +28,7 @@ p,a {
 .section-title {
     font-family: 'San-Francisco', sans-serif;
     font-weight: 500;
-    font-size: 2.6rem;
+    font-size: 2.6em;
     letter-spacing: 0.5px;
     padding-left: 3rem;
 }
@@ -86,6 +86,7 @@ p,a {
 /*Introduction*/
 
 .intro-section {
+    position: relative;
     width: 100%;
     height: 38vw;
     /* background:maroon; */
@@ -95,15 +96,19 @@ p,a {
     to {opacity: 1;}
 }
 .intro-input {
-    width: 258px;
-    height: 40px;
-    line-height: 40px;
     position: absolute;
-    top: 18em;
+    /* top: 28.5rem; */
+    top: 71.5%;
     left: calc(50% - 125px);
-    background: none;
+    /* Text-box */
+    width: 16rem;
+    /* width: 15.6%; */
+    height: 2.5rem;
+    /* height: 6.2%; */
+    line-height: 100%;
     color: white;
-    font-size: 28px;
+    font-size: 1.75rem;
+    /* font-size: 175%; */
     font-family: 'San-Francisco', sans-serif;
     text-align: center;
     border: 1px solid white;
@@ -117,12 +122,15 @@ p,a {
 }
 .intro-instructions {
     position: absolute;
-    top: 36em;
-    color: white;
-    font-size: 16px;
-    opacity: 0.5;
-    width: 99%;
+    /* top: inherit; */
+    /* top: auto; */
+    /* top: 33rem; */
+    top: 82.75%;
     text-align: center;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.5;
+    width: 100%;
     margin: 0;
     animation-name: instructions-fade;
     animation-duration: 6s;
@@ -136,7 +144,6 @@ p,a {
     color: black; */
 }
 .projects-section-title {
-    max-width: 640px;
     margin: 0 auto 4rem auto;
     text-align: center;
     font-size: 2rem;
@@ -175,9 +182,9 @@ p,a {
     opacity: 0;
 }
 .projects-tile-title {
+    text-align: center;
     font-size: 1.5rem;
     line-height: .3;
-    text-align: center;
     color:var(--main-light-grey);
 }
 .projects-title-hidden-code {
@@ -205,28 +212,28 @@ p,a {
 }
 .about-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0 auto;
 }
 .about-section-text {
+    width: 38%;
+    padding-top: 7%;
     font-size: 1.6rem;
     line-height: 1.6;
-    width: 38%;
-    padding-left: 10%;
 }
 .about-text-links {
     color: var(--main-blue);
     position: relative;
 }
 .about-text-links:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
     position: absolute;
+    display: block;
     width: 0;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    content: "";
+    background: none repeat scroll 0 0 transparent;
     -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -242,8 +249,8 @@ p,a {
 /*Contact Section*/
 .contact-section {
     display: flex;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
     padding-top: 2em;
     padding-bottom: 5em;
     background-color: var(--main-grey);
@@ -286,7 +293,10 @@ p,a {
 /* 
 - To do:
 change colour schemes (intro and projects/contact section)
-take professional picture
+fix resize container
+    fix about description
+    fix rem vs em
+new car picture
 
 - Must dos:
 ** fix positioning for other screen sizes (use vh instead of rem?)
