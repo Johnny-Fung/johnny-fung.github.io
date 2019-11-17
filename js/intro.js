@@ -9,14 +9,16 @@ var canvas = document.querySelector("#scene"),
 // Color palettes:
 // [Original, Dark, Colourful, Winter/Blue, Green, Multicolor]
 var colorpalettes = [
-    ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"],
-    ["#83142c","#263859", "#414141","#263859", "#6b778d"],
-    ["#1E3888","#47A8BD", "#F5E663","#FFAD69", "#9C3848"],
-    ["#CFFCFF","#AAEFDF", "#9EE37D","#63C132", "#358600"], 
-    ["#114B5F", "#028090", "#E4FDE1","#456990", "#F45B69"],
-    ["#E7ECEF","#274C77", "#6096BA","#A3CEF1", "#8B8C89"]
+    ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"],
+    ["#83142c","#263859","#414141","#263859","#6b778d"],
+    ["#1E3888","#47A8BD","#F5E663","#FFAD69","#9C3848"],
+    ["#CFFCFF","#AAEFDF","#9EE37D","#63C132","#358600"], 
+    ["#114B5F", "#028090","#E4FDE1","#456990","#F45B69"],
+    ["#E7ECEF","#274C77","#6096BA","#A3CEF1","#8B8C89"],
+    ["#d6d3de","#c4e4d6","#f5e391","#eae8e3","#b72c39"],
+    ["#FCDEBE","#D4D2A5", "#928779","#5E5768", "#3A445D"]
 ]
-var colors = colorpalettes[Math.floor(Math.random()*6)];
+var colors = colorpalettes[Math.floor(Math.random()*8)];
 
 //Get height and width of section
 var elmnt = document.getElementById("intro-area");

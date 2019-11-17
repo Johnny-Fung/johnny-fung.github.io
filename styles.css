@@ -1,13 +1,23 @@
 /*****Global Variables*****/
 :root {
     --background-color:rgb(24,26,27);
-    --font-color:rgb(198,194,187);
-    --link-color:rgb(57,132,247);
+    --secondary-background-color:black;
+    --font-color:rgb(170,170,170);
+    --secondary-font-color:rgb(245,245,247);
+    --highlight-color:rgb(57,132,247);
+    --navbar-color:rgb(22,23,24,0.95);
+    --intro-color:black;
+    --about-text-color:rgb(245,245,247);
 }
-[data-theme="dark"] {
-    --background-color:white;
-    --font-color:black;
-    --link-color:rgb(57,132,247);
+[data-theme="light"] {
+    --background-color:rgb(229,228,229);
+    --secondary-background-color:white;
+    --font-color:rgb(105,105,110);
+    --secondary-font-color: black;
+    --highlight-color:rgb(57,132,247);
+    --navbar-color:rgb(220,220,220,0.95);
+    --intro-color:rgb(17,18,19);
+    --about-text-color:rgb(200,200,200);
 }
 html {
     box-sizing: border-box;
@@ -19,8 +29,12 @@ html {
 body{
     background:var(--background-color);
 }
-h1,p,a {
+h1,a{
     color:var(--font-color);
+    font-family: 'San-Francisco', sans-serif;
+}
+p{
+    color:var(--secondary-font-color);
     font-family: 'San-Francisco', sans-serif;
 }
 
@@ -41,7 +55,7 @@ ul {
     font-weight: 500;
     font-size: 2.6em;
     letter-spacing: 0.5px;
-    padding-left: 3rem;
+    padding-left: 4rem;
 }
 .section-text {
   text-align: center;
@@ -52,7 +66,6 @@ ul {
 /*Navigation Bar*/
 .navbar-background {
     height: 2.5rem;
-    background-color: var(--background-color);
 }
 /*Navigation Bar*/
 .navbar {
@@ -63,8 +76,7 @@ ul {
     left: 0;
     width: 100%;
     z-index:1;
-    /* Opaque background */
-    background: rgba(24,26,27,0.9);
+    background: var(--navbar-color);
 }
 .navbar-logo {
     align-self: flex-end;
@@ -92,7 +104,7 @@ ul {
     transition: color 0.3s ease-out;
 }
 .navbar-links a:hover {
-    color:var(--link-color);
+    color:var(--highlight-color);
 }
 
 /*Toggle Switch*/
@@ -115,7 +127,7 @@ ul {
     display:none;
 }
 .slider {
-    background-color: #ccc;
+    background-color: var(--font-color);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -135,7 +147,7 @@ ul {
     transition: .4s;
 }
 input:checked + .slider {
-    background-color: var(--link-color);
+    background-color: var(--highlight-color);
 }
 input:checked + .slider:before {
     transform: translateX(1.1rem);
@@ -153,8 +165,10 @@ input:checked + .slider:before {
 .intro-section {
     position: relative;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     height: 38vw;
-    background: black;
+    background: var(--intro-color);
 }
 @keyframes input-fade {
     from {opacity: 0;}
@@ -202,11 +216,11 @@ input:checked + .slider:before {
   }
 /*Projects Section*/
 .projects-section {
-    width: 100%;
-    padding-top: 0.7rem;
-    padding-bottom: 4rem;
-    /* background: white;
-    color: black; */
+    width: 98.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
 }
 .projects-section-title {
     margin: 0 auto 4rem auto;
@@ -217,13 +231,13 @@ input:checked + .slider:before {
 .projects-grid-setup {
     display: grid;
     grid-template-columns: repeat(2, minmax(320px, 1fr));
-    grid-gap: 0.9rem;
+    grid-gap: 2rem;
     width: 98.3%;
     margin: 0 auto;
     margin-bottom: 1rem;
 }
 .projects-tile {
-    background: black;
+    background: var(--secondary-background-color);
 }
 .projects-tile-picture {
     width:100%;
@@ -254,7 +268,7 @@ input:checked + .slider:before {
 }
 .projects-title-hidden-code {
     opacity: 0;
-    color: var(--link-color);
+    color: var(--highlight-color);
     -webkit-transition: opacity 0.7s ease-out;
     -moz-transition: opacity 0.7s ease-out;
     -o-transition: opacity 0.7s ease-out;
@@ -279,6 +293,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    padding: 1rem;
 }
 .about-section-text {
     width: 37%;
@@ -286,8 +301,11 @@ input:checked + .slider:before {
     font-size: 1.6rem;
     line-height: 1.6;
 }
+.about-section-text p {
+    color: var(--about-text-color);
+}
 .about-text-links {
-    color: var(--link-color);
+    color: var(--highlight-color);
     position: relative;
 }
 .about-text-links:after {
@@ -304,7 +322,7 @@ input:checked + .slider:before {
     -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;    
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    background: var(--link-color);
+    background: var(--highlight-color);
   }
 .about-text-links:hover:after { 
     width: 100%; 
@@ -316,8 +334,9 @@ input:checked + .slider:before {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding-top: 2em;
+    padding-top: 1rem;
     padding-bottom: 5em;
+    background: var(--background-color);
 }
 .contact-sectioning {
     display: flex;
@@ -349,31 +368,23 @@ input:checked + .slider:before {
 }
 .contact-buttons:hover {
     transform: translateY(-8px);
-    color:var(--link-color);
+    color:var(--highlight-color);
 }
 
 
 /* 
 - To do:
-change colour schemes (intro and projects/contact section)
 fix resize container
     fix about description
     fix rem vs em
 update pictures
-swap light/dark mode
 
 - Must dos:
 ** fix positioning for other screen sizes (use vh instead of rem?)
 ** @media for different screen sizes/resolutions
-
-- Potential section:
-find more words to add color accent (my car for blog section?)
-    "gearhead" - show youtube and car mods portfolio
-*/
 
 /* 
 git remote -v
 git push origin (to upload to github)
 git fetch origin (to download from github)
 */
-/* test */
