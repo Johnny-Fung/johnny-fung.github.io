@@ -92,6 +92,7 @@ ul {
 }
 .navbar-links {
     display: inline-flex;
+    cursor: pointer;
     /* background: red; */
 }
 .navbar-links a {
@@ -106,7 +107,6 @@ ul {
 .navbar-links a:hover {
     color:var(--highlight-color);
 }
-
 /*Toggle Switch*/
 .theme-switch-wrapper {
     display: flex;
@@ -119,31 +119,31 @@ ul {
   }
 .theme-switch {
     display: inline-block;
-    height: 1.3rem;
     position: relative;
+    height: 1.3rem;
     width: 2.5rem;
 }
 .theme-switch input {
     display:none;
 }
 .slider {
-    background-color: var(--font-color);
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
     position: absolute;
+    bottom: 0;
+    left: 0;
     right: 0;
     top: 0;
+    cursor: pointer;
+    background-color: var(--font-color);
     transition: .4s;
 }
 .slider:before {
-    background-color: #fff;
+    position: absolute;
     bottom: 0.184rem;
-    content: "";
     height: .93rem;
     width: .93rem;
     left: 0.27rem;
-    position: absolute;
+    content: "";
+    background-color: #fff;
     transition: .4s;
 }
 input:checked + .slider {
