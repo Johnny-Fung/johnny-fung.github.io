@@ -99,16 +99,17 @@ ul {
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
+    margin-left: 1.6rem;
   }
 .switch-text {
     margin-left: 0.7rem;
-    font-size: 1rem;
+    font-size: .985rem;
   }
 .theme-switch {
     display: inline-block;
-    height: 34px;
+    height: 1.3rem;
     position: relative;
-    width: 60px;
+    width: 2.5rem;
 }
 .theme-switch input {
     display:none;
@@ -125,22 +126,22 @@ ul {
 }
 .slider:before {
     background-color: #fff;
-    bottom: 4px;
+    bottom: 0.184rem;
     content: "";
-    height: 26px;
-    left: 4px;
+    height: .93rem;
+    width: .93rem;
+    left: 0.27rem;
     position: absolute;
     transition: .4s;
-    width: 26px;
 }
 input:checked + .slider {
     background-color: var(--link-color);
 }
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(1.1rem);
 }
 .slider.round {
-    border-radius: 34px;
+    border-radius: 1.3rem;
 }
 .slider.round:before {
     border-radius: 50%;
