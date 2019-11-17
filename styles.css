@@ -93,7 +93,6 @@ ul {
 .navbar-links {
     display: inline-flex;
     cursor: pointer;
-    /* background: red; */
 }
 .navbar-links a {
     font-size: 1rem;
@@ -116,6 +115,7 @@ ul {
 .switch-text {
     margin-left: 0.7rem;
     font-size: .985rem;
+    color:var(--font-color);
   }
 .theme-switch {
     display: inline-block;
@@ -143,7 +143,7 @@ ul {
     width: .93rem;
     left: 0.27rem;
     content: "";
-    background-color: #fff;
+    background-color: rgb(220,220,220);
     transition: .4s;
 }
 input:checked + .slider {
