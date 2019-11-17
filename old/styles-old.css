@@ -1,22 +1,22 @@
 /*****Global Values*****/
 :root {
-    --main-grey:rgb(24,26,27);
-    --main-light-grey:rgb(198,194,187);
-    --main-blue:rgb(57,132,247);
+    --background-color:rgb(24,26,27);
+    --font-color:rgb(198,194,187);
+    --link-color:rgb(57,132,247);
     --site-width:1400px;
     --site-edges:5%;
-    background:var(--main-grey);
-    color:var(--main-light-grey);
+    background:var(--background-color);
+    color:var(--font-color);
 }
 html {
   scroll-behavior: smooth;
 }
 a {
-    color: var(--main-light-grey);
+    color: var(--font-color);
     text-decoration: none;
 }
 a:hover {
-    color:var(--main-blue);
+    color:var(--link-color);
 }
 /*****Screen size scaling*****/
 
@@ -93,11 +93,11 @@ p,a {
 }
 .projects-align-text {
     text-align: center;
-    color:var(--main-blue);
+    color:var(--link-color);
 }
 .projects-title-hidden {
     opacity: 0;
-    color:var(--main-blue);
+    color:var(--link-color);
     transition: opacity 0.55s ease-out;
 }
 .box:hover .projects-title-hidden {
@@ -128,7 +128,7 @@ p,a {
     font-size: 1.5rem;
 }
 .about-text-links {
-    color: var(--main-blue);
+    color: var(--link-color);
     position: relative;
 }
 .about-text-links:after {
@@ -139,7 +139,7 @@ p,a {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var(--main-blue);
+    background: var(--link-color);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }

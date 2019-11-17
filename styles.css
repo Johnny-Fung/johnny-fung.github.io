@@ -1,24 +1,35 @@
-/*****Global Settings*****/
+/*****Global Variables*****/
 :root {
-    --main-grey:rgb(24,26,27);
-    --main-light-grey:rgb(198,194,187);
-    --main-blue:rgb(57,132,247);
-    background:var(--main-grey);
-    color:var(--main-light-grey);
+    --background-color:rgb(24,26,27);
+    --font-color:rgb(198,194,187);
+    --link-color:rgb(57,132,247);
+}
+[data-theme="dark"] {
+    --background-color:white;
+    --font-color:black;
+    --link-color:rgb(57,132,247);
 }
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+/***Global Settings***/
+
+/*Font Styling*/
+body{
+    background:var(--background-color);
+}
+h1,p,a {
+    color:var(--font-color);
+    font-family: 'San-Francisco', sans-serif;
+}
+
+/*Remove Text Decorations*/
 a {
     text-decoration: none;
 }
 ul {
     list-style:none;
-}
-/***Fonts***/
-p,a {
-    font-family: 'San-Francisco', sans-serif;
 }
 
 
@@ -41,19 +52,19 @@ p,a {
 /*Navigation Bar*/
 .navbar-background {
     height: 2.5rem;
-    background-color: var(--main-grey);
+    background-color: var(--background-color);
 }
 /*Navigation Bar*/
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index:1;
     /* Opaque background */
-    background: rgba(24,26,27,0.9)
+    background: rgba(24,26,27,0.9);
 }
 .navbar-logo {
     align-self: flex-end;
@@ -72,8 +83,8 @@ p,a {
     /* background: red; */
 }
 .navbar-links a {
+    font-size: 1rem;
     padding: 1rem 1.5rem 1rem 1.5rem;
-    color: var(--main-light-grey);
     -webkit-transition: color 0.3s ease-out;
     -moz-transition: color 0.3s ease-out;
     -o-transition: color 0.3s ease-out;
@@ -81,15 +92,68 @@ p,a {
     transition: color 0.3s ease-out;
 }
 .navbar-links a:hover {
-    color:var(--main-blue);
+    color:var(--link-color);
 }
+
+/*Toggle Switch*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+.switch-text {
+    margin-left: 0.7rem;
+    font-size: 1rem;
+  }
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+.theme-switch input {
+    display:none;
+}
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+input:checked + .slider {
+    background-color: var(--link-color);
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+  
+
 /*Introduction*/
 
 .intro-section {
     position: relative;
     width: 100%;
     height: 38vw;
-    /* background:maroon; */
+    background: black;
 }
 @keyframes input-fade {
     from {opacity: 0;}
@@ -172,11 +236,11 @@ p,a {
     position: absolute;
     left: 0;
     opacity: 1;
-    -webkit-transition: opacity 0.8s ease-in-out;
-    -moz-transition: opacity 0.8s ease-in-out;
-    -o-transition: opacity 0.8s ease-in-out;
-    -ms-transition: opacity 0.8s ease-in-out;    
-    transition: opacity 0.8s ease-in-out;
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    -o-transition: opacity 0.7s ease-in-out;
+    -ms-transition: opacity 0.7s ease-in-out;    
+    transition: opacity 0.7s ease-in-out;
 }
 .projects-tile:hover .preview-crossfade img.top {
     opacity: 0;
@@ -185,16 +249,16 @@ p,a {
     text-align: center;
     font-size: 1.5rem;
     line-height: .3;
-    color:var(--main-light-grey);
+    color:var(--font-color);
 }
 .projects-title-hidden-code {
     opacity: 0;
-    color: var(--main-blue);
-    -webkit-transition: opacity 0.8s ease-out;
-    -moz-transition: opacity 0.8s ease-out;
-    -o-transition: opacity 0.8s ease-out;
-    -ms-transition: opacity 0.8s ease-out;    
-    transition: opacity 0.8s ease-out;
+    color: var(--link-color);
+    -webkit-transition: opacity 0.7s ease-out;
+    -moz-transition: opacity 0.7s ease-out;
+    -o-transition: opacity 0.7s ease-out;
+    -ms-transition: opacity 0.7s ease-out;    
+    transition: opacity 0.7s ease-out;
 }
 .projects-tile:hover .projects-title-hidden-code {
     opacity: 1.0;
@@ -216,13 +280,13 @@ p,a {
     margin: 0 auto;
 }
 .about-section-text {
-    width: 38%;
+    width: 37%;
     padding-top: 7%;
     font-size: 1.6rem;
     line-height: 1.6;
 }
 .about-text-links {
-    color: var(--main-blue);
+    color: var(--link-color);
     position: relative;
 }
 .about-text-links:after {
@@ -239,7 +303,7 @@ p,a {
     -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;    
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    background: var(--main-blue);
+    background: var(--link-color);
   }
 .about-text-links:hover:after { 
     width: 100%; 
@@ -253,7 +317,6 @@ p,a {
     flex-direction: column;
     padding-top: 2em;
     padding-bottom: 5em;
-    background-color: var(--main-grey);
 }
 .contact-sectioning {
     display: flex;
@@ -282,11 +345,10 @@ p,a {
     -ms-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     padding: .45rem 2rem 0rem 2rem;
-    color:var(--main-light-grey);
 }
 .contact-buttons:hover {
     transform: translateY(-8px);
-    color:var(--main-blue);
+    color:var(--link-color);
 }
 
 
@@ -296,17 +358,16 @@ change colour schemes (intro and projects/contact section)
 fix resize container
     fix about description
     fix rem vs em
-new car picture
+update pictures
+swap light/dark mode
 
 - Must dos:
 ** fix positioning for other screen sizes (use vh instead of rem?)
 ** @media for different screen sizes/resolutions
 
-- Nice to haves:
+- Potential section:
 find more words to add color accent (my car for blog section?)
     "gearhead" - show youtube and car mods portfolio
-persistent nav bar but blur/change colour on scroll
-swap light/dark mode
 */
 
 /* 

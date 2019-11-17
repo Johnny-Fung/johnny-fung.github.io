@@ -28,7 +28,7 @@
 <!--Navigation Bar-->
 <div class="navbar-background"></div>
 <nav id="navigation" class="navbar">
-    <div></div>
+    <div style="flex-grow: 0.226"></div>
     <a 
     class="navbar-logo"
     href="#top">
@@ -38,13 +38,21 @@
         style="width:2.5rem; height:2.5rem;"
         >
     </a>
-    <div style="flex-grow: 0.2"></div>
-    <ul class="navbar-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div></div>
+    <div style="flex-grow: 0.6"></div>
+    <div>
+        <ul class="navbar-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+        </label>
+        <p class="switch-text">Dark Mode</p>
+    </div>
 </nav>
 
 <!--Introduction Section-->
@@ -257,3 +265,4 @@
 
 <!--JS-->
 <script type="text/javascript" src="js/intro.js"></script>
+<script type="text/javascript" src="js/site-themes.js"></script>
