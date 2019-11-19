@@ -22,7 +22,9 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-size: 100%;
 }
+
 /***Global Settings***/
 
 /*Font Styling*/
@@ -48,12 +50,58 @@ ul {
 
 
 /*****Screen size scaling*****/
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+    font-size: 80%;
+    }
+}
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+    font-size: 74%;
+    }
+}
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+    font-size: 70%;
+    }
+}
+
+/* 
+Current issues:
+
+Issues with small/mobile screen sizes:
+contact row not showing - transitions not showing
+    (place slightly higher? or add more padding below)
+    problem may disappear once pic is resized
+fix parallax picture in place for smaller screen sizes
+    contact picture and parallax picture change with rem
+    use smaller version of banner for smaller sizes
+textbox offset for smaller screen sizes
+
+Mobile Screen Size: 
+move navbar links to middle
+collapse projects to 1 column
+move "Let's get in touch!" to bottom?
+
+Tutorial Changes:
+navbar (mobile) - justify content to middle
+navbar list (mobile) - modify margins
+projects section header with specific header selected (mobile) - change font size
+projects section (size slightly bigger than mobile) - change padding
+projects grid (size slightly bigger than mobile) - grid template column size change
+contact section header with specific header selected (mobile) - change font size
+footer (mobile) - align to middle
+*/
+/*****Section Formatting*****/
 
 /*Section Titles*/
 .section-title {
     font-family: 'San-Francisco', sans-serif;
     font-weight: 500;
-    font-size: 2.6em;
+    font-size: 2.6rem;
     letter-spacing: 0.5px;
     padding-left: 4rem;
 }
@@ -226,7 +274,11 @@ input:checked + .slider:before {
     margin: 0 auto 4rem auto;
     text-align: center;
     font-size: 2rem;
-    /* color: black; */
+}
+@media (max-width: 28.75em) {
+    .projects-section-title {
+      font-size: 1rem;
+    }
 }
 .projects-grid-setup {
     display: grid;
@@ -282,13 +334,19 @@ input:checked + .slider:before {
 /*About Section*/
 .parallax {
     background-image: url("media/about-banner.jpg");
-    width: 100%;
-    height: 39vw;
+    width: 98%;
+    height: 40rem;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* Adjust parallax picture for mobile displays */
+/* @media (max-width: 28.75em) {
+    .parallax {
+        background-image: url("media/about-banner-mobile.jpg");
+    }
+  } */
 .about-section {
     display: flex;
     flex-direction: row;
@@ -335,9 +393,20 @@ input:checked + .slider:before {
     width: 100%;
     flex-direction: column;
     padding-top: 1rem;
-    padding-bottom: 5em;
+    padding-bottom: 5rem;
     background: var(--background-color);
 }
+/* Contact Buttons Hover Fix */
+@media (max-width: 75em) {
+    .contact-section {
+        padding-bottom: 7.5rem;
+    }
+  }
+@media (max-width: 61.25em) {
+    .contact-section {
+        padding-bottom: 7.7rem;
+    }
+  }
 .contact-sectioning {
     display: flex;
     width: 100%;
@@ -349,12 +418,21 @@ input:checked + .slider:before {
     display: flex;
     align-self: center;
 }
+.contact-content-image {
+    width: 17.5rem; 
+    height: 17.5rem;
+}
 .contact-buttons-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     margin-top: 7rem;
+}
+@media (max-width: 28.75em) {
+    .contact-buttons-row {
+        margin-top: 0rem;
+    }
 }
 .contact-buttons {
     display: inline-block;
@@ -376,7 +454,6 @@ input:checked + .slider:before {
 - To do:
 fix resize container
     fix about description
-    fix rem vs em
 update pictures
 
 - Must dos:
@@ -388,3 +465,4 @@ git remote -v
 git push origin (to upload to github)
 git fetch origin (to download from github)
 */
+
