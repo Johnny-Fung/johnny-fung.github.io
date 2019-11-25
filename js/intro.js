@@ -1,3 +1,16 @@
+// Methodology:
+// - "Particle" Function to assign random properties for each individual pixel:
+//      random properties for speed, start location, friction effect for bounce, and color
+// - "Data" Function takes given text and stores the data from that text (as if it were displayed), then uses 
+//      the getImageData from the canvas api to copy pixel data from the "displayed text" and pushes the 
+//      coordinates of the non-transparent pixels into a pixel array to be rendered.
+// - "Render" Function to create the individual pixels for each item in the pixel array.
+// - Create individual pixels - Call render function and use prototype (properties from Particle function) to 
+//      to draw the individual squares based on the given properties and adjust acceleration based on where pixel destination. 
+// - Add event listeners for the mouse coordinates and clicks that affect render property values.
+//      The pixels will also be rendered to move based on where the mouse is.
+
+
 // Initialize canvas scene
 var canvas = document.querySelector("#scene"),
 		ctx = canvas.getContext("2d"),
@@ -66,7 +79,6 @@ Particle.prototype.render = function() {
 
     this.x += this.vx;
     this.y +=  this.vy;
-
     ctx.fillStyle = this.color;
     ctx.beginPath();
     // Draw circle particles
@@ -79,7 +91,7 @@ Particle.prototype.render = function() {
     var b = this.y - mouse.y;
 
     var distance = Math.sqrt( a*a + b*b );
-    //Friction speed
+    //Friction speed to push pixels away on mouse hover
     if(distance<(radius*45)){
         this.accX = (this.x - mouse.x)/100;
         this.accY = (this.y - mouse.y)/100;
