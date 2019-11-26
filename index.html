@@ -14,6 +14,7 @@
     <meta name="description" content="Johnny Fung's Personal Portfolio Website, Statistics at University of Waterloo">
     <meta name="author" content="Johnny Fung">
     <meta name="keywords" content="Johnny Fung, Johnny, Fung, Portfolio, Website, Johnny Fung portfolio, University of Waterloo">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
     <!--Stylesheet-->
     <link rel="stylesheet" href="styles.css"/>
@@ -47,10 +48,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img 
         src="media/icon.png"
         alt="Johnny Fung"
-        style="width:2.5rem; height:2.5rem;"
         >
     </a>
-    <div style="flex-grow: 0.57"></div>
+    <div class="navbar-padding"></div>
     <div>
         <ul class="navbar-links">
             <li><a onclick="scrollSmoothTo('projects')">Projects</a></li>
@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="intro-area" class="intro-section">
     <canvas id="scene"></canvas>
     <input class="intro-input" id="input-text" type="text" value="｛ Hi, I'm Johnny! ｝"/>
-    <p class="intro-instructions">Feel free to type in the textbox above, or click on the pixels to change the radius of the mouse padding.</p>
+    <p class="intro-instructions">Feel free to type in the textbox above or click on the pixels.</p>
 </section>
 
 <!--Projects Section-->
@@ -196,20 +196,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="about" class="parallax about-section">
     <h1 class="section-title"
     data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-out">
-        About
+    About
     </h1>
     <div class="about-section-text"
     data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-out">
         <p> 
-            I'm Johnny, an aspiring software engineer and a student at the 
-            University of Waterloo majoring in
-            <a class="about-text-links" href="https://uwaterloo.ca/statistics-and-actuarial-science/">Statistics</a>
-            and minoring in
-            <a class="about-text-links" href="https://cs.uwaterloo.ca/">Computer Science</a>.
-            When I’m not catching up on the latest tech news, 
-            you’ll find me underneath my car making modifications. 
-            I’m a huge gearhead, I really enjoy meeting new people, 
-            and I love talking about new ideas. Feel free to reach out!</p>
+        I'm Johnny, an aspiring software engineer and a student at the 
+        University of Waterloo majoring in
+        <a class="about-text-links" href="https://uwaterloo.ca/statistics-and-actuarial-science/">Statistics</a>
+        and minoring in
+        <a class="about-text-links" href="https://cs.uwaterloo.ca/">Computer Science</a>.
+        When I’m not catching up on the latest tech news, 
+        you’ll find me underneath my car making modifications. 
+        I’m a huge gearhead, I really enjoy meeting new people, 
+        and I love talking about new ideas. Feel free to reach out!
+        </p>
     </div>
 </section>
 
@@ -230,12 +231,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             >
         </a>
         <p class="section-text contact-content">
-                Let's get in touch!
+            Let's get in touch!
         </p>
         <div></div>
     </div>
     <!--Contact Start-->
-    <div class="contact-buttons-row" 
+    <div class="contact-buttons-row"
     data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-out">
         <a
         href="https://github.com/Johnny-Fung"

@@ -26,7 +26,6 @@ html {
 }
 
 /***Global Settings***/
-
 /*Font Styling*/
 body{
     background:var(--background-color);
@@ -48,7 +47,6 @@ ul {
     list-style:none;
 }
 
-
 /*****Screen size scaling*****/
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
@@ -62,40 +60,8 @@ ul {
     font-size: 74%;
     }
 }
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
-    html {
-    font-size: 70%;
-    }
-}
 
-/* 
-Current issues:
-Issues with both small and mobile screen sizes:
-contact row not showing - transitions not showing           ok
-    (place slightly higher? or add more padding below)
-    problem may disappear once pic is resized
-fix parallax picture in place for smaller screen sizes
-    contact picture and parallax picture change with rem
-    use smaller version of banner for smaller sizes
-textbox offset for smaller screen sizes
-
-Mobile Screen Size issues: 
-move navbar links to middle
-collapse projects to 1 column
-move "Let's get in touch!" to bottom?
-
-Adjustments in Tutorial:
-navbar (mobile) - justify content to middle
-navbar list (mobile) - modify margins
-projects section header with specific header selected (mobile) - change font size
-projects section (size slightly bigger than mobile) - change padding
-projects grid (size slightly bigger than mobile) - grid template column size change
-contact section header with specific header selected (mobile) - change font size
-footer (mobile) - align to middle
-*/
 /*****Section Formatting*****/
-
 /*Section Titles*/
 .section-title {
     font-family: 'San-Francisco', sans-serif;
@@ -105,8 +71,18 @@ footer (mobile) - align to middle
     padding-left: 4rem;
 }
 .section-text {
-  text-align: center;
-  font-size: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+@media (max-width: 28.75em) {
+    .section-title {
+        text-align: center;
+        font-size: 1.85rem;
+        padding-left: 0.8rem;
+    }
+    .section-text {
+        font-size: 1.15rem;
+    }
 }
 
 /*****Individual Section Formatting*****/
@@ -114,7 +90,6 @@ footer (mobile) - align to middle
 .navbar-background {
     height: 2.5rem;
 }
-/*Navigation Bar*/
 .navbar {
     display: flex;
     justify-content: flex-start;
@@ -133,9 +108,31 @@ footer (mobile) - align to middle
     -ms-transition: transform 0.3s;    
     transition: transform 0.3s;
 }
+.navbar-logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
 .navbar-logo:hover {
     transform: translateY(-3px);
     opacity: 0.9;
+}
+.navbar-padding {
+    flex-grow: 0.57;
+}
+/* Adjust Navbar Logo for Mobile */
+@media (max-width: 28.75em) {
+    .navbar-logo {
+        align-self: center;
+    }
+    .navbar-logo img {
+        padding-top: 0.3rem;
+        padding-left: 1.6rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    .navbar-padding {
+        flex-grow: 0;
+    }
 }
 .navbar-links {
     display: inline-flex;
@@ -205,7 +202,37 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-  
+/* Compress navbar links on mobile */
+@media (max-width: 28.75em) {
+    .navbar {
+        justify-content: left;
+    }
+    .navbar-links a{
+        font-size: 0.9rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .theme-switch-wrapper{
+        margin-left: 0.7rem;
+    }
+    .theme-switch {
+        height: 0.97rem;
+        width: 1.8rem;
+    }
+    .switch-text {
+        margin-left: 0.7rem;
+        font-size: .885rem;
+        margin-right: 0.95rem;
+    }
+    .slider:before {
+        bottom: 0.13rem;
+        height: 0.68rem;
+        width: 0.68rem;
+        left: 0.23895rem;
+    }
+    input:checked + .slider:before {
+        transform: translateX(0.7rem);
+    }
+}
 
 /*Introduction*/
 
@@ -223,18 +250,14 @@ input:checked + .slider:before {
 }
 .intro-input {
     position: absolute;
-    /* top: 28.5rem; */
-    top: 71.5%;
+    top: 74.5%;
     left: calc(50% - 125px);
     /* Text-box */
-    width: 16rem;
-    /* width: 15.6%; */
+    width: 15.9rem;
     height: 2.5rem;
-    /* height: 6.2%; */
     line-height: 100%;
     color: white;
     font-size: 1.75rem;
-    /* font-size: 175%; */
     font-family: 'San-Francisco', sans-serif;
     text-align: center;
     border: 1px solid white;
@@ -248,10 +271,7 @@ input:checked + .slider:before {
 }
 .intro-instructions {
     position: absolute;
-    /* top: inherit; */
-    /* top: auto; */
-    /* top: 33rem; */
-    top: 82.75%;
+    top: 85.75%;
     text-align: center;
     color: white;
     font-size: 1rem;
@@ -260,8 +280,75 @@ input:checked + .slider:before {
     margin: 0;
     animation-name: instructions-fade;
     animation-duration: 6s;
-  }
+}
+@media (max-width: 120em) {
+    .intro-input {
+        top: 81%;
+        left: calc(50% - 115px);
+        /* Text-box */
+        width: 14.7rem;
+        height: 2.3rem;
+        line-height: 100%;
+        color: white;
+        font-size: 1.6rem;
+    }
+    .intro-instructions {
+        top: 90%;
+        font-size: 1.2rem;
+    }
+}
+/* Adjust Textbox positioning for different screen sizes */
+@media (max-width: 90em) {
+    .intro-input {
+        top: 75.5%;
+        left: calc(50% - 100px);
+        /* Text-box */
+        width: 12.775rem;
+        height: 1.98rem;
+        line-height: 100%;
+        color: white;
+        font-size: 1.4rem;
+    }
+    .intro-instructions {
+        top: 86%;
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 75em) {
+    .intro-input {
+        top: 77%;
+        left: calc(50% - 77px);
+        /* Text-box */
+        width: 11.75rem;
+        height: 1.8rem;
+        line-height: 100%;
+        color: white;
+        font-size: 1.3rem;
+    }
+    .intro-instructions {
+        top: 88%;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 28.75em) {
+    .intro-input {
+        top: 73%;
+        left: calc(50% - 45px);
+        /* Text-box */
+        width: 8.15rem;
+        height: 1.1rem;
+        line-height: 100%;
+        color: white;
+        font-size: 0.9rem;
+    }
+    .intro-instructions {
+        top: 89%;
+        font-size: 0.7rem;
+    }
+}
+
 /*Projects Section*/
+
 .projects-section {
     width: 98.5%;
     margin-left: auto;
@@ -281,6 +368,22 @@ input:checked + .slider:before {
     width: 98.3%;
     margin: 0 auto;
     margin-bottom: 1rem;
+}
+/* Compress projects grid on mobile */
+@media (max-width: 30.625em) {
+    .projects-section {
+        padding-top: 0.1rem;
+        padding-bottom: 0.6rem;
+    }
+    .projects-section-title {
+        text-align: center;
+        font-size: 1.3rem;
+        margin: -0.5rem auto 2rem auto;
+    }
+    .projects-grid-setup {
+        grid-template-columns: 1fr;
+        grid-gap: 1.2rem;
+    }
 }
 .projects-tile {
     background: var(--secondary-background-color);
@@ -312,6 +415,13 @@ input:checked + .slider:before {
     line-height: .3;
     color:var(--font-color);
 }
+@media (max-width: 30.625em) {
+    .projects-tile-title {
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: .25;
+    }
+}
 .projects-title-hidden-code {
     opacity: 0;
     color: var(--highlight-color);
@@ -325,6 +435,7 @@ input:checked + .slider:before {
     opacity: 1.0;
 }
 
+
 /*About Section*/
 .parallax {
     background-image: url("media/about-banner.jpg");
@@ -335,13 +446,6 @@ input:checked + .slider:before {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* Adjust parallax picture for mobile displays */
-/* @media (max-width:480px) {
-    .parallax {
-      display: none;
-    }
-  } */
-
 .about-section {
     display: flex;
     flex-direction: row;
@@ -356,6 +460,22 @@ input:checked + .slider:before {
 }
 .about-section-text p {
     color: var(--about-text-color);
+}
+@media (max-width: 28.75em) {
+    .about-section {
+        display: inline-block;
+        text-align: center;
+        padding: 0.8rem;
+        margin: 0 0;
+    }
+    .about-section-text {
+        text-align: center;
+        padding-top: 2%;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
 }
 .about-text-links {
     color: var(--highlight-color);
@@ -414,7 +534,7 @@ input:checked + .slider:before {
     align-self: center;
 }
 .contact-content-image {
-    width: 17.5rem; 
+    width: 17.5rem;
     height: 17.5rem;
 }
 .contact-buttons-row {
@@ -424,11 +544,6 @@ input:checked + .slider:before {
     width: 100%;
     margin-top: 7rem;
 }
-@media (max-width: 28.75em) {
-    .contact-buttons-row {
-        margin-top: 0rem;
-    }
-}
 .contact-buttons {
     display: inline-block;
     font-size: 2rem;
@@ -437,27 +552,36 @@ input:checked + .slider:before {
     -o-transition: transform 0.3s ease-out;
     -ms-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
-    padding: .45rem 2rem 0rem 2rem;
+    padding: 0.45rem 2rem 0rem 2rem;
 }
 .contact-buttons:hover {
     transform: translateY(-8px);
     color:var(--highlight-color);
 }
-
-
-/* 
-- To do:
-fix resize container
-    fix about description
-update pictures
-
-- Must dos:
-** fix positioning for other screen sizes (use vh instead of rem?)
-** @media for different screen sizes/resolutions
-
-/* 
-git remote -v
-git push origin (to upload to github)
-git fetch origin (to download from github)
-*/
-
+@media (max-width: 28.75em) {
+    .contact-sectioning {
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .contact-content-image {
+        width: 17rem; 
+        height: 17rem;
+        padding-bottom: 2.2rem;
+    }
+    .contact-content{
+        display: flex;
+        align-self: center;
+        font-size: 1.5rem;
+        padding-bottom: 1.8rem;
+    }
+    .contact-buttons-row {
+        margin-top: 0rem;
+    }
+    .contact-buttons {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0rem;
+    }
+}
