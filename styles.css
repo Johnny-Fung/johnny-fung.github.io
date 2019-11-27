@@ -400,11 +400,11 @@ input:checked + .slider:before {
     position: absolute;
     left: 0;
     opacity: 1;
-    -webkit-transition: opacity 0.7s ease-in-out;
-    -moz-transition: opacity 0.7s ease-in-out;
-    -o-transition: opacity 0.7s ease-in-out;
-    -ms-transition: opacity 0.7s ease-in-out;    
-    transition: opacity 0.7s ease-in-out;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    -ms-transition: opacity 0.8s ease-in-out;    
+    transition: opacity 0.8s ease-in-out;
 }
 .projects-tile:hover .preview-crossfade img.top {
     opacity: 0;
@@ -425,11 +425,11 @@ input:checked + .slider:before {
 .projects-title-hidden-code {
     opacity: 0;
     color: var(--highlight-color);
-    -webkit-transition: opacity 0.7s ease-out;
-    -moz-transition: opacity 0.7s ease-out;
-    -o-transition: opacity 0.7s ease-out;
-    -ms-transition: opacity 0.7s ease-out;    
-    transition: opacity 0.7s ease-out;
+    -webkit-transition: opacity 0.8s ease-out;
+    -moz-transition: opacity 0.8s ease-out;
+    -o-transition: opacity 0.8s ease-out;
+    -ms-transition: opacity 0.8s ease-out;    
+    transition: opacity 0.8s ease-out;
 }
 .projects-tile:hover .projects-title-hidden-code {
     opacity: 1.0;
