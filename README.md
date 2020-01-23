@@ -3,7 +3,6 @@
 
 
 My personal website to blog and showcase some fun projects in my portfolio.
-- Work in progress
 
 
 
